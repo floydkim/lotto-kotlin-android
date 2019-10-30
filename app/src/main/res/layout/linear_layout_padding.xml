@@ -8,8 +8,8 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="0"
+            android:layout_marginLeft="0dp"
             android:background="#8BFFC107"
-            android:paddingLeft="60"
+            android:paddingLeft="60dp"
             android:text="TextView" />
 </LinearLayout>
