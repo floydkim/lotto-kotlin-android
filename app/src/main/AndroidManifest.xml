@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.floydkim.lotto">
+        package="com.floydkim.lotto">
 
     <application
             android:allowBackup="true"
@@ -9,23 +9,19 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".AbsoluteActivity">
-        </activity>
+        <activity android:name=".ConstraintLayoutActivity"></activity>
+        <activity android:name=".AbsoluteActivity"></activity>
         <activity android:name=".TestActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ResultActivity">
-        </activity>
-        <activity android:name=".NameActivity">
-        </activity>
-        <activity android:name=".ConstellationActivity">
-        </activity>
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".NameActivity"></activity>
+        <activity android:name=".ConstellationActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
