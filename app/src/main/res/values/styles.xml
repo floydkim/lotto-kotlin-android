@@ -8,4 +8,33 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- 결과 화면 테마 -->
+    <style name="AppTheme.Result" parent="AppTheme"> <!-- AppTheme을 상속하는 테마를 선언. 지정하지 않은 속성은 AppTheme 정의를 따른다 -->
+        <item name="colorPrimary">@color/colorPrimaryResult</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkResult</item>
+        <item name="colorAccent">@color/colorAccentResult</item>
+    </style>
+
+    <!-- 별자리 화면 테마 -->
+    <style name="AppTheme.Constellation" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryConstellation</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkConstellation</item>
+        <item name="colorAccent">@color/colorAccentConstellation</item>
+        <!-- 버튼의 컬러 -->
+        <item name="colorButtonNormal">@color/colorButtonConstellation</item>
+        <!-- 버튼등 텍스트 컬러 -->
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- 이름 화면 테마 -->
+    <style name="AppTheme.Name" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryName</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkName</item>
+        <item name="colorAccent">@color/colorAccentName</item>
+        <!-- 버튼의 컬러 -->
+        <item name="colorButtonNormal">@color/colorButtonName</item>
+        <!-- 버튼등 텍스트 컬러 -->
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>
