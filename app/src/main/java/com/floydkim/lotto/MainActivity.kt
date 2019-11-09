@@ -48,7 +48,13 @@ fun getRandomLottoNumbers(): MutableList<Int> {
     val lottoNumbers = mutableListOf<Int>()
 
     for (i in 1..6) {
-        lottoNumbers.add(getRandomLottoNumber())
+        var number = 0
+
+        do {
+            number = getRandomLottoNumber()
+        } while (lottoNumbers.contains(number))
+
+        lottoNumbers.add(number)
     }
 
     return lottoNumbers
