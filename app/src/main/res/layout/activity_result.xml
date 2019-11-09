@@ -58,8 +58,9 @@
             app:layout_constraintStart_toStartOf="@+id/guideline4"
             app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <view
             android:id="@+id/textViewBall1"
+            class="androidx.appcompat.widget.AppCompatTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -82,8 +83,9 @@
             app:layout_constraintStart_toStartOf="@+id/guideline4"
             app:layout_constraintTop_toTopOf="@+id/guideline1" />
 
-    <TextView
+    <view
             android:id="@+id/textViewBall2"
+            class="androidx.appcompat.widget.AppCompatTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -106,8 +108,9 @@
             app:layout_constraintStart_toEndOf="@+id/textViewBall1"
             app:layout_constraintTop_toTopOf="@+id/guideline1" />
 
-    <TextView
+    <view
             android:id="@+id/textViewBall3"
+            class="androidx.appcompat.widget.AppCompatTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -130,8 +133,9 @@
             app:layout_constraintStart_toEndOf="@+id/textViewBall2"
             app:layout_constraintTop_toTopOf="@+id/guideline1" />
 
-    <TextView
+    <view
             android:id="@+id/textViewBall4"
+            class="androidx.appcompat.widget.AppCompatTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -154,8 +158,9 @@
             app:layout_constraintStart_toEndOf="@+id/textViewBall3"
             app:layout_constraintTop_toTopOf="@+id/guideline1" />
 
-    <TextView
+    <view
             android:id="@+id/textViewBall5"
+            class="androidx.appcompat.widget.AppCompatTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
@@ -178,8 +183,9 @@
             app:layout_constraintStart_toEndOf="@+id/textViewBall4"
             app:layout_constraintTop_toTopOf="@+id/guideline1" />
 
-    <TextView
+    <view
             android:id="@+id/textViewBall6"
+            class="androidx.appcompat.widget.AppCompatTextView"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="8dp"
