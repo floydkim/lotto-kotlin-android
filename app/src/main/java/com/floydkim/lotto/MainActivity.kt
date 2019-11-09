@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ResultActivity::class.java)
 
             // 대상 액티비티에 Int Array를 전달
-            intent.putIntegerArrayListExtra("result", ArrayList(getRandomLottoNumbers()))
+            intent.putIntegerArrayListExtra("result", ArrayList(getShuffleLottoNumbers()))
 
             startActivity(intent)
         }
@@ -58,4 +58,20 @@ fun getRandomLottoNumbers(): MutableList<Int> {
     }
 
     return lottoNumbers
+}
+
+fun getShuffleLottoNumbers(): MutableList<Int> {
+    val list = mutableListOf<Int>()
+
+    for (number in 1..45) {
+        list.add(number) // 1 ~ 45가 모두 들어간 어레이 만들고
+    }
+
+    list.shuffle() // 섞어서 랜덤하게 만듦
+
+    return list.subList(0, 6) // 앞 6개만 잘라서 리턴
+
+    // 45개 중 6개 숫자를 뽑는데 항상 45회 반복을 한다.
+    // 중복검사 방식은 높은 확률로 10회 미만 반복으로 종료될 것.
+    // 45개 리스트 만드는 부분도 이 함수에 들어있는 것은 큰 비효율.
 }
