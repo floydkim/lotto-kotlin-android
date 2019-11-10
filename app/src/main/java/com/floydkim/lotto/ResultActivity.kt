@@ -2,9 +2,12 @@ package com.floydkim.lotto
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatTextView
 import kotlinx.android.synthetic.main.activity_result.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ResultActivity : AppCompatActivity() {
 
@@ -18,8 +21,14 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
         Toast.makeText(applicationContext, "ResultActivity 입니다.", Toast.LENGTH_SHORT).show()
 
-        val result =
-            intent.getIntegerArrayListExtra("result") // putIntegerArrayListExtra 호출시 정한 name을 이용해 값을 가져온다
+        val result = intent.getIntegerArrayListExtra("result") // putIntegerArrayListExtra 호출시 정한 name을 이용해 값을 가져온다
+        val name = intent.getStringExtra("name")
+
+        resultLabel.text = "랜덤으로 생성된\n번호입니다"
+
+        if (!TextUtils.isEmpty(name)) {
+            resultLabel.text = "${name} 님의\n${SimpleDateFormat("yyyy년 MM월 dd일").format(Date())}\n번호입니다"
+        }
 
         // 전달받은 결과가 있을때만 실행
         result?.let {
