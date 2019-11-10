@@ -13,11 +13,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val numbersArray = mutableListOf<Int>()
+        for (number in 1..45) {
+            numbersArray.add(number)
+        }
+
         randomCard.setOnClickListener {
             val intent = Intent(this, ResultActivity::class.java)
 
             // 대상 액티비티에 Int Array를 전달
-            intent.putIntegerArrayListExtra("result", ArrayList(getShuffleLottoNumbers()))
+//            intent.putIntegerArrayListExtra("result", ArrayList(getShuffleLottoNumbers()))
+
+            intent.putIntegerArrayListExtra("result", ArrayList(shuffleLottoNumbers(numbersArray)))
 
             startActivity(intent)
         }
@@ -74,4 +81,9 @@ fun getShuffleLottoNumbers(): MutableList<Int> {
     // 45개 중 6개 숫자를 뽑는데 항상 45회 반복을 한다.
     // 중복검사 방식은 높은 확률로 10회 미만 반복으로 종료될 것.
     // 45개 리스트 만드는 부분도 이 함수에 들어있는 것은 큰 비효율.
+}
+
+fun shuffleLottoNumbers(numbers: MutableList<Int>): MutableList<Int> {
+    numbers.shuffle()
+    return numbers.subList(0, 6)
 }
