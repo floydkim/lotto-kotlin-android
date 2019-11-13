@@ -1,13 +1,12 @@
 package com.floydkim.lotto
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.CalendarView
 import android.widget.DatePicker
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_constellation.*
-import java.util.Calendar
+import java.util.*
 
 //import android.icu.util.Calendar // 이건 API level 하위호환 안됨
 
@@ -18,7 +17,19 @@ class ConstellationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_constellation)
 
         goResultButton.setOnClickListener {
-            startActivity(Intent(this, ResultActivity::class.java))
+            val intent = Intent(this, ResultActivity::class.java)
+
+            intent.putIntegerArrayListExtra(
+                "result", ArrayList(
+                    LottoNumberMaker.getLottoNumbersFromHash(
+                        makeConstellationString(datePicker.month, datePicker.dayOfMonth)
+                    )
+                )
+            )
+
+            intent.putExtra("constellation", makeConstellationString(datePicker.month, datePicker.dayOfMonth))
+
+            startActivity(intent)
         }
 
         textView.text = makeConstellationString(datePicker.month, datePicker.dayOfMonth)
@@ -34,7 +45,6 @@ class ConstellationActivity : AppCompatActivity() {
                 }
 
                 override fun onSelectedDayChange(view: CalendarView, year: Int, month: Int, dayOfMonth: Int) {
-
                 }
             })
     }

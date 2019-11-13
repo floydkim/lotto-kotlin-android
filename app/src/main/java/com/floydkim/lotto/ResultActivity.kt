@@ -1,10 +1,8 @@
 package com.floydkim.lotto
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.Toast
-import androidx.appcompat.widget.AppCompatTextView
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_result.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -22,11 +20,16 @@ class ResultActivity : AppCompatActivity() {
 
         val result = intent.getIntegerArrayListExtra("result") // putIntegerArrayListExtra 호출시 정한 name을 이용해 값을 가져온다
         val name = intent.getStringExtra("name")
+        val constellation = intent.getStringExtra("constellation")
 
         resultLabel.text = "랜덤으로 생성된\n번호입니다"
 
         if (!TextUtils.isEmpty(name)) {
             resultLabel.text = "${name} 님의\n${SimpleDateFormat("yyyy년 MM월 dd일").format(Date())}\n번호입니다"
+        }
+
+        if (!TextUtils.isEmpty(constellation)) {
+            resultLabel.text = "${constellation}의\n${SimpleDateFormat("yyyy년 MM월 dd일").format(Date())}\n번호입니다"
         }
 
         // 전달받은 결과가 있을때만 실행
