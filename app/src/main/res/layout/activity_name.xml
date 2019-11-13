@@ -63,13 +63,13 @@
             app:layout_constraintGuide_percent="0.5" />
 
     <Button
-            android:id="@+id/goButton"
+            android:id="@+id/backButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:text="번호생성"
+            android:text="뒤로가기"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/editText"
@@ -77,13 +77,13 @@
             app:layout_constraintVertical_bias="0.0" />
 
     <Button
-            android:id="@+id/backButton"
+            android:id="@+id/goButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:text="뒤로가기"
+            android:text="번호생성"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/editText"
             app:layout_constraintStart_toStartOf="@+id/guideline4"

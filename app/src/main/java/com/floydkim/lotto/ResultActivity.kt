@@ -19,7 +19,6 @@ class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
-        Toast.makeText(applicationContext, "ResultActivity 입니다.", Toast.LENGTH_SHORT).show()
 
         val result = intent.getIntegerArrayListExtra("result") // putIntegerArrayListExtra 호출시 정한 name을 이용해 값을 가져온다
         val name = intent.getStringExtra("name")

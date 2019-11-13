@@ -37,8 +37,6 @@ class NameActivity : AppCompatActivity() {
         backButton.setOnClickListener {
             finish()
         }
-
-        Toast.makeText(applicationContext, "NameActivity 입니다.", Toast.LENGTH_SHORT).show()
     }
 }
 

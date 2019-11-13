@@ -36,8 +36,6 @@ class MainActivity : AppCompatActivity() {
         nameCard.setOnClickListener {
             startActivity(Intent(this, NameActivity::class.java))
         }
-
-        Toast.makeText(applicationContext, "MainActivity 입니다.", Toast.LENGTH_SHORT).show()
     }
 }
 
